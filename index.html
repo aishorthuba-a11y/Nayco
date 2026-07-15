@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nayco | Creator Merch</title>
+    <meta
+      name="description"
+      content="Shop items from your favorite YouTubers and TikTokers in one stylish marketplace."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a href="#" class="brand">Nayco</a>
+        <div class="nav-links">
+          <a href="#creators">Creators</a>
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+          <span class="user-pill" id="user-pill" hidden></span>
+          <a class="signin-btn" href="#" id="sign-in-trigger">Sign in</a>
+          <a class="cart-btn" href="#shop">Cart <span id="cart-count">0</span></a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Official creator drops</p>
+          <h1>Buy merch from your favorite YouTubers and TikTokers.</h1>
+          <p class="hero-copy">
+            Discover limited-edition hoodies, accessories, and exclusive collabs
+            from the creators you love.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#shop">Shop now</a>
+            <a class="btn secondary" href="#creators">Meet creators</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Trending this week</h2>
+          <ul>
+            <li>Glow hoodie by Mia Nova</li>
+            <li>Studio cap by Jae Lane</li>
+            <li>Signature bag by Kiki Clips</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="creators" class="section">
+        <div class="section-header">
+          <p class="eyebrow">Featured creators</p>
+          <h2>Creators you can shop from today</h2>
+        </div>
+
+        <div class="creator-grid">
+          <article class="creator-card">
+            <h3>Mia Nova</h3>
+            <p>Viral beauty and fashion creator</p>
+            <span>New drop • 3 items</span>
+          </article>
+          <article class="creator-card">
+            <h3>Jae Lane</h3>
+            <p>Gaming and streetwear favorite</p>
+            <span>Best seller • 5 items</span>
+          </article>
+          <article class="creator-card">
+            <h3>Kiki Clips</h3>
+            <p>Comedy and lifestyle trends</p>
+            <span>Limited stock • 2 items</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="shop" class="section">
+        <div class="section-header">
+          <p class="eyebrow">Hot items</p>
+          <h2>Featured merch drops</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-badge">Creator pick</div>
+            <img
+              src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80"
+              alt="Glow hoodie from Mia Nova"
+              class="product-image"
+            />
+            <h3>Glow Hoodie</h3>
+            <p>Soft oversized hoodie from Mia Nova.</p>
+            <div class="product-footer">
+              <strong>$49</strong>
+              <button class="buy-btn">Buy now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-badge">Trending</div>
+            <img
+              src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+              alt="Studio cap from Jae Lane"
+              class="product-image"
+            />
+            <h3>Studio Cap</h3>
+            <p>Clean cap with a signature patch from Jae Lane.</p>
+            <div class="product-footer">
+              <strong>$24</strong>
+              <button class="buy-btn">Buy now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-badge">Limited</div>
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+              alt="Signature bag from Kiki Clips"
+              class="product-image"
+            />
+            <h3>Signature Bag</h3>
+            <p>Everyday bag designed with Kiki Clips.</p>
+            <div class="product-footer">
+              <strong>$39</strong>
+              <button class="buy-btn">Buy now</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section cta">
+        <h2>Bring your audience together in one shop</h2>
+        <p>
+          Sell your own items, connect with fans, and turn every drop into a
+          fresh collection.
+        </p>
+        <a class="btn primary" href="#">Start selling</a>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="auth-modal" aria-hidden="true">
+      <div class="modal-panel">
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow">Secure sign in</p>
+        <h2>Sign in to buy</h2>
+        <p class="modal-copy">Choose a provider to continue and unlock checkout.</p>
+
+        <div class="social-grid">
+          <button class="social-btn" data-provider="Google">Continue with Google</button>
+          <button class="social-btn" data-provider="Facebook">Continue with Facebook</button>
+          <button class="social-btn" data-provider="Apple">Continue with Apple</button>
+          <button class="social-btn" data-provider="TikTok">Continue with TikTok</button>
+        </div>
+
+        <form id="email-form" class="auth-form">
+          <input id="email-input" type="email" placeholder="Email address" required />
+          <button type="submit" class="btn primary full">Continue with email</button>
+        </form>
+
+        <p class="auth-message" id="auth-message"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
